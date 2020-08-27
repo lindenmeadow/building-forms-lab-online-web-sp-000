@@ -6,7 +6,11 @@ class BandsContainer extends Component {
   render() {
     return(
       <div>
-        BandsContainer
+        <h1>Bands Container</h1>
+        <BandInput addBand={this.props.addBand}/>
+        <ul>
+          {this.props.bands.map(band => <li key={band.name}>{band.name}</li>)}
+        </ul>
       </div>
     )
   }
